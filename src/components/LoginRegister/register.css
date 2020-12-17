@@ -1,0 +1,107 @@
+.register {
+  margin: 0;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff !important;
+}
+h2 {
+  color: #ffffff;
+  font-size: 20px;
+  margin-top: 15px;
+}
+h3 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+h3 span {
+  color: #ff0000;
+}
+
+p {
+  text-align: center;
+
+  letter-spacing: 2px;
+}
+p a {
+  text-decoration: none;
+  color: #ff0000;
+  font-weight: bold;
+}
+p a:hover {
+  color: #ffffff;
+}
+.login_card {
+  width: 350px;
+  height: auto;
+  padding: 60px 35px 35px 35px;
+  border-radius: 20px;
+  background: #474747;
+}
+.register_card {
+  width: 600px;
+  height: auto;
+  padding: 60px 35px 35px 35px;
+  border-radius: 20px;
+  background: #474747;
+}
+
+.fields {
+  width: 100%;
+  padding: 5px;
+}
+.fields .field_block {
+  display: flex;
+  justify-content: space-between;
+}
+.fields .input_box {
+  margin-top: 20px;
+}
+.fields .input_box label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.fields .input_box input {
+  width: 100%;
+  height: 35px;
+  outline: none;
+  border: none;
+  background: #ffffff;
+  color: #000000;
+  padding: 5px 15px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+.fields .input_box input::placeholder {
+  font-size: 14px;
+}
+
+.button-register {
+  width: 100%;
+  height: 35px;
+  margin-top: 30px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  letter-spacing: 3px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: #3d3d3d;
+  color: #ffffff;
+}
+.fields .button-register:hover {
+  background: #ffffff;
+  color: #000000;
+}
+.error {
+  display: block;
+  color: #ff0000;
+  margin-top: 3px;
+}
