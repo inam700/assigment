@@ -28,25 +28,30 @@ class AddPost extends Component {
 
   render() {
     return (
-      <div>
-        <input
-          type="text"
-          placeholder="name"
-          name="title"
-          value={this.state.title}
-          onChange={this.handleChange}
-        />
-        <input
-          type="text"
-          placeholder="post description"
-          name="body"
-          value={this.state.body}
-          onChange={this.handleChange}
-        />
-        <input type="file" onChange={this.handleChange} />
-        <button type="submit" onClick={this.addNewPost}>
-          add
-        </button>
+      <div className="container">
+        <div className="add-post">
+          <input
+            type="text"
+            placeholder="name"
+            name="title"
+            value={this.state.title}
+            onChange={this.handleChange}
+          />
+          <input
+            type="text"
+            placeholder="post description"
+            name="body"
+            value={this.state.body}
+            onChange={this.handleChange}
+          />
+          <button
+            type="submit"
+            className="add-button"
+            onClick={this.addNewPost}
+          >
+            add
+          </button>
+        </div>
       </div>
     );
   }
