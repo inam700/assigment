@@ -1,14 +1,5 @@
 import React, { Component } from "react";
-import {
-  Container,
-  Navbar,
-  Nav,
-  Form,
-  FormControl,
-  Button,
-  Col,
-  Row,
-} from "react-bootstrap";
+import { Container, Navbar, Nav, Button } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 class Header extends Component {
   render() {

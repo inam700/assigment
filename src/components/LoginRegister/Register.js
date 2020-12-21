@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import InputField from "./Form/FormField";
 import { Link } from "react-router-dom";
-import { Container, Card, Row, Col, Button } from "react-bootstrap";
 import "./register.css";
 import { update, generateData, isFormValid } from "./Form/FormActions";
 

@@ -21,3 +21,12 @@
   text-transform: uppercase;
   font-weight: 900;
 }
+
+.comments{
+  border: 1px solid;
+  margin: 5px 0;
+}
+.comments span{
+  font-weight: bolder;
+  color: #ff0000;
+}

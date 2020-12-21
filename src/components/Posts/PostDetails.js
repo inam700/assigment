@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import { Container } from "react-bootstrap";
 import { connect } from "react-redux";
 import { getPost } from "../redux/actions/PostActions";
+import { Media } from "react-bootstrap";
 import axios from "axios";
+import user from '../../img/user.png'
 class PostDetails extends Component {
   state = {
     comments: [],
@@ -17,13 +19,12 @@ class PostDetails extends Component {
     });
   }
   getComments = () => {
-    const newArrayComments = this.state.comments.filter((item) => {
-      return item.postId === this.props.match.params.id;
+    const filteredComments = this.state.comments.filter((item) => {
+      return item.postId == this.props.match.params.id;
     });
     this.setState({
-      newArray: [...this.state.newArray, newArrayComments],
-    });
-    console.log("filter", newArrayComments);
+      newArray:filteredComments
+    })
   };
   render() {
     const { post } = this.props;
@@ -32,7 +33,20 @@ class PostDetails extends Component {
         <h1>{post.title}</h1>
         <p>{post.body}</p>
         <button onClick={this.getComments}>get comments</button>
-        {console.log("simple", this.state.comments)}
+        {this.state.newArray.map((item) => (
+          <Media className="comments" key={item.id}>
+            <img width={64} height={64} alt="user" src={user} />
+            <Media.Body>
+              <h4>
+                <span>USER NAME:</span> {item.name}
+              </h4>
+              <h5>
+                <span>EMAIL: </span> {item.email}
+              </h5>
+              <p>{item.body}</p>
+            </Media.Body>
+          </Media>
+        ))}
       </Container>
     );
   }

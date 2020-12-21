@@ -60,7 +60,6 @@ class PostList extends Component {
             </Col>
           ))}
         </Row>
-        {console.log(posts)}
       </Container>
     );
   }
