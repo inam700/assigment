@@ -34,9 +34,10 @@ class PostList extends Component {
           />
         </p>
         <Row>
-          {filteredResult.slice(0, 6).map((item) => (
-            <Col lg={12} md={6} sm={12} key={item.id} className="my-3">
-              <Card>
+        {/* slice(0, 40) */}
+          {filteredResult.map((item) => (
+            <Col lg={3} md={3} sm={12} key={item.id} className="my-3" >
+              <Card className="rounded">
                 {/* <Card.Img src={item.image} alt="card data" height={200} /> */}
                 <Card.Body>
                   <Card.Title>
@@ -48,7 +49,8 @@ class PostList extends Component {
                   {localStorage.getItem("success") === "true" ? (
                     <Link
                       to={`/details/${item.id}`}
-                      className="btn btn-primary"
+                      className="btn btn-primary btn-block rounded"
+                      
                     >
                       Click Me
                     </Link>

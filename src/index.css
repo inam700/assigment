@@ -30,3 +30,8 @@
   font-weight: bolder;
   color: #ff0000;
 }
+.user-bck{
+  background-image: url('./img/bck.jpg');
+  height: 250px;
+  text-align: center;
+}

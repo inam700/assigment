@@ -66,6 +66,7 @@ class Login extends Component {
       } else {
         alert("please check your email and password");
       }
+
     }
   };
   render() {

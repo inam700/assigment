@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import { Container } from "react-bootstrap";
+import { Container, Image, ListGroup } from "react-bootstrap";
 import { connect } from "react-redux";
 import { getPost } from "../redux/actions/PostActions";
 import { Media } from "react-bootstrap";
 import axios from "axios";
-import user from '../../img/user.png'
+import user from "../../img/user.png";
+import userImg from "../../img/userImg.jpg";
 class PostDetails extends Component {
   state = {
     comments: [],
@@ -23,13 +24,18 @@ class PostDetails extends Component {
       return item.postId == this.props.match.params.id;
     });
     this.setState({
-      newArray:filteredComments
-    })
+      newArray: filteredComments,
+    });
   };
   render() {
     const { post } = this.props;
     return (
       <Container>
+        <ListGroup>
+          <div className="user-bck">
+            <Image src={user} alt="user" height={200} className="my-4" />
+          </div>
+        </ListGroup>
         <h1>{post.title}</h1>
         <p>{post.body}</p>
         <button onClick={this.getComments}>get comments</button>

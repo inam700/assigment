@@ -110,6 +110,14 @@ class Register extends Component {
         "confirmPassword",
         this.state.inputdata.confirmPassword.value
       );
+      this.props.history.push("/login");
+      let registerObject = {
+        userFirstName: localStorage.getItem("firstName"),
+        userLastName: localStorage.getItem("lastName"),
+        userEmail: localStorage.getItem("email"),
+        userPassword: localStorage.getItem("password"),
+      };
+      console.table(registerObject);
     }
   };
   render() {
@@ -164,7 +172,10 @@ class Register extends Component {
             {this.state.inputError ? (
               <div className="error">Please Check Your Data</div>
             ) : null}
-            <button className='button-register' onClick={(event) => this.submitForm(event)}>
+            <button
+              className="button-register"
+              onClick={(event) => this.submitForm(event)}
+            >
               Register
             </button>
           </form>
